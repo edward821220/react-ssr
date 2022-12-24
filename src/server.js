@@ -1,8 +1,9 @@
 import express from "express";
 import React from "react";
 import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router-dom/server";
-import App from "./components/App";
+// import { StaticRouter } from "react-router-dom/server";
+// import App from "./components/App";
+import Home from "./components/Home";
 
 const app = express();
 
@@ -10,9 +11,10 @@ app.use(express.static("public"));
 
 app.get("*", (req, res) => {
   const content = renderToString(
-    <StaticRouter location={req.url}>
-      <App />
-    </StaticRouter>
+    <Home />
+    // <StaticRouter location={req.url}>
+    //   <App />
+    // </StaticRouter>
   );
   const html = `
   <!DOCTYPE html>
@@ -25,9 +27,9 @@ app.get("*", (req, res) => {
   </head>
   <body>
     <div id="root">${content}</div>
-    <script src="bundle.js"></script>
   </body>
   `;
+  // <script src="bundle-client.js"></script>
   res.send(html);
 });
 

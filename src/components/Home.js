@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <div>Homepage</div>
       <button onClick={() => console.log("click me")}>click me</button>
-      <Link to="/second">To second page</Link>
+      {/* <Link to="/second">To second page</Link> */}
     </div>
   );
 };

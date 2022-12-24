@@ -4,7 +4,7 @@ module.exports = {
   target: "node",
   entry: "./src/client.js",
   output: {
-    filename: "bundle.js",
+    filename: "bundle-client.js",
     path: path.resolve(__dirname, "public"),
   },
   module: {

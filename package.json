@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon build/bundle.js",
+    "dev": "nodemon build/bundle-server.js",
     "build-server": "webpack --config webpack.server.js --mode development",
     "build-client": "webpack --config webpack.client.js --mode development",
     "build": "npm run build-server && npm run build-client"
