@@ -29,7 +29,6 @@ app.get("*", (req, res) => {
     <div id="root">${content}</div>
   </body>
   `;
-  // <script src="bundle-client.js"></script>
   res.send(html);
 });
 
