@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.static("public"));
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   const content = renderToString(
     <Home />
     // <StaticRouter location={req.url}>
